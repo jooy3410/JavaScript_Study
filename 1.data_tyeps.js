@@ -19,7 +19,7 @@ console.log(name);
 //var를 쓰면 안되는 이유
 //1.
 //var hoisting : 어디에 선언했냐 상관없이 항상제일 위로 선언을 끌어올려주는것을 말한다.
-//때문에 쓰면 안된다.
+//var hoisting 때문에 쓰면 안된다.
 //2.
 //var는 block scope가 먹히지 않는다.
 //그래서 let을 쓰는것이 좋다.
@@ -33,7 +33,11 @@ console.log(name);
 //Variable types
 //primitive(더이상 작은 단위로 나눠질 수 없는 한가지 아이템)
 //==single item: number, string, boolean, null, undefied, symbol
+
+
 //object(single item들을 한단위로 한박스로 관리할수 있게 해주는 것)
+
+
 //function, first-class function== 이것이 있으면 다른변수에 할당이 가능하고
 //리턴타입으로도 function을 전달할 수 있다.
 
@@ -41,15 +45,15 @@ let x = null; // --> 비어있는 값이다
 
 let y = undefined; //--> 할당은 되어있지만 텅텅비어있는지 모른다.
 
-//map이나 자료구조에서 식별자가 필요하거나 우선순위를 주고싶을때 쓰는 것이다.
+//Symbol은  map이나 자료구조에서 식별자가 필요하거나 우선순위를 주고싶을때 쓰는 것이다.
 
 const symbol1 = Symbol('id');
 const symbol2 = Symbol('id');
 console.log(wymbol1 === symbol2) //false
 //이렇게 구분할 수도있고
 
-const gSybol1 = Sybol.for('id');
-const gSybol2 = Sybol.for('id');
+const gSybol1 = Symbol.for('id');
+const gSybol2 = Symbol.for('id');
 console.log(gSybol1 === gSybol2) //true
 
 
@@ -60,9 +64,12 @@ let text ='hello';
 console.log(text.charAt(0));
 console.log('value: ${text}, type: ${typeof text}');
 //value:hello, type: string
-text = 1; //value:1 , tyep: number
+text = 1; 
 console.log('value: ${text}, type: ${typeof text}');
-text = '7' + 5 ; // value:75, type: string
+//value:1 , tyep: number
+text = '7' + 5 ; 
 console.log('value: ${text}, type: ${typeof text}');
-text = '8' / '2' // value:4, type: number
+// value:75, type: string
+text = '8' / '2' 
 console.log('value: ${text}, type: ${typeof text}');
+// value:4, type: number
