@@ -55,3 +55,43 @@ function check() {
     }
     return true;
 }
+
+//7. Equality
+const stringFive = '5'
+const numberFive = 5;
+
+// == loose equality, with type conversion (타입이 달라도 내용이 같으면 같다.)
+console.log(stringFive == numberFive); 
+console.log(stringFive != numberFive);
+
+//=== strict equality, no type conversion (타입이 다르면 틀린다.)
+console.log(stringFive === numberFive);
+console.log(stringFive !== numberFive);
+
+//object equality by reference (object는 메모리에 탑제될때 레퍼런스형식으로 탑제된다.)
+const jooy1 = {name: 'jooy' };
+const jooy2 = {name: 'jooy' };
+const jooy3 = jooy1;
+console.log(jooy1 == jooy2); // f
+console.log(jooy1 === jooy2); // f
+console.log(jooy1 === jooy3); // t
+
+// equality - puzzler
+console.log(0 == false); //t
+console.log(0 === false); //f
+console.log('' == false); //t
+console.log('' === false); //f
+console.log(null == undefined); //t
+console.log(null === undefined); //f
+
+//8. Conditional operators: if
+//if, else if, else
+const my_name = 'jooy';
+if (my_name === 'jooy') {
+    console.log('hi');
+} else if (my_name === 'coder') {
+    console.log('amazing');
+} else {
+    console.log('nukwnon');
+}
+
