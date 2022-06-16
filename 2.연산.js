@@ -95,3 +95,61 @@ if (my_name === 'jooy') {
     console.log('nukwnon');
 }
 
+//9. Ternary operator: ?
+//condition ? value1 : value2;
+console.log(my_name === 'jooy' ? 'yes' : 'no'); // my_name이 jooy면 yes를 출력하고 아니면no를 출력한다.
+// 간단할 때만 이렇게 쓴다.
+
+//10. Switch statement
+//use for multiple if checks
+//use for enum-like value check
+//use for multiple type checks in TS
+const browser = 'IE';
+switch (browser) {
+    case 'IE':
+        console.log('IE');
+        break;
+    case 'Chrome':
+    case 'FireFox':
+        console.log('FireFox');
+        break;
+    default:
+        console.log('browser');
+        break;
+}
+
+//1. Loops
+//while loop, while the condition is truty,
+//body code is executed.
+let i = 3;
+while (i > 0) {
+    console.log('while : ${i}');
+    i--;
+}
+
+//do while loop, body code is executed first,
+//then check the condition
+//do while 문은 블록을 먼저 실행시키고 싶을때 사용하는 문법이다.
+do {
+    console.log('do while: ${i}');
+    i--;
+} while (i > 0);
+
+
+// for loop, for(begin; condition; step)
+for (i = 3; i > 0; i--){
+    console.log('for');
+}
+
+for (let i = 3; i >0; i = i -2){
+    console.log('inline variable for : ')
+}
+
+//let 지역변수
+
+//nested loops
+for(let i = 0; i < 10; i++) {
+    for(let j = 0; j < 10; j++){
+        console.log('이중 for문')
+    }
+}
