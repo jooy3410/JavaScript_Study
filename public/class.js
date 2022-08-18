@@ -2,10 +2,10 @@
 //class에 데이터를 넣어 만든것이 오브젝트이다.
 //object: instance of a class
 //JavaScript classes
-//ES6에 클레스가 추가 됐다.
+//ES6에 클래스가 추가 됐다.
 
 
-//1.클레스 선언
+//1.클래스 선언
 class Person{
     //constructor(생성자) 를 통해 오브젝트를 만들때 필요한 데이터를 전달한다.
     //
@@ -33,7 +33,7 @@ console.log(jooy.age);
 jooy.speak();
 
 //2.Getter and setters
-//만든어 놓은 클레스를 방어적으로 사용할 수 있게 해주는 getter와 setters
+//만든어 놓은 클래스를 방어적으로 사용할 수 있게 해주는 getter와 setters
 class User {
     constructor(firstName, lastName, age) {
         this.firstName = firstName;
@@ -147,7 +147,7 @@ console.log(triangle.getArea());
 
 
 //6.instanceOf
-//왼쪽에 있는 rectangle 오브젝트가 오른쪽에있는  Rectangle 클레스로 만들어진것인지아닌지 확인하는 것이다. 그리고 참 거짓을 리턴한다.
+//왼쪽에 있는 rectangle 오브젝트가 오른쪽에있는  Rectangle 클래스로 만들어진것인지아닌지 확인하는 것이다. 그리고 참 거짓을 리턴한다.
 console.log(rectangle instanceof Rectangle);
 console.log(triangle instanceof Rectangle);
 console.log(triangle instanceof Triangle);
