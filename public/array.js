@@ -49,5 +49,24 @@ fruits.forEach(function (fruit, index, array) {
 fruits.forEach((fruit, index) => console.log(fruit, index));
 
 //4. add .delete, copy'
-fruits.push('', '')
+fruits.push('파파야', '망고');
+console.log(fruits);
 
+fruits.pop();
+fruits.pop();
+console.log(fruits);
+
+//unshift: add an item to the benigging
+fruits.unshift('파파야', '망고');
+console.log(fruits);
+
+//shift: remove an item from the benigging
+fruits.shift();
+console.log(fruits);
+
+//shift, unshift are slawr than pop, push
+//splice: remove an item by index position
+fruits.push('자몽', '오렌지', '레몬');
+console.log(fruits);
+fruits.splice(1);
+console.log(fruits);
