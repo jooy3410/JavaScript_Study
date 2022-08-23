@@ -49,24 +49,53 @@ fruits.forEach(function (fruit, index, array) {
 fruits.forEach((fruit, index) => console.log(fruit, index));
 
 //4. add .delete, copy'
+//제일 뒤에 값을 넣는것 push
 fruits.push('파파야', '망고');
 console.log(fruits);
 
+//맨뒤에 있는 과일 빼기 pop
 fruits.pop();
 fruits.pop();
 console.log(fruits);
 
 //unshift: add an item to the benigging
+//앞에서 넣을때
 fruits.unshift('파파야', '망고');
 console.log(fruits);
 
 //shift: remove an item from the benigging
+//앞에서부터 지울때
 fruits.shift();
 console.log(fruits);
 
+//shift, unshift는 pop과 push보다 느리다.
+//무언가 전체의 데이터들이 움직여야한다면 느리다.
+
+
 //shift, unshift are slawr than pop, push
+
+
 //splice: remove an item by index position
 fruits.push('자몽', '오렌지', '레몬');
 console.log(fruits);
+//splice라는 api를 쓰면 지정된 위치에서 데이터를 지울 수 있다.
+//인덱스를 지정하고 원하는 개수를 말하지 않으면 시작하는것만 놔두고 다지운다.
 fruits.splice(1);
+
+fruits.splice(1, 1);
+console.log(fruits);
+fruits.splice(1, 1, '수박', '파파야');
+console.log(fruits);
+
+//두가지 배열을 묶어서 만들 수 있다.
+const fruits2 =['배', '자두']
+const newFruits = fruits.concat(fruits2);
+console.log(newFruits);
+
+//5. Searching 검색할 수 있는 api indexOf
+console.log(fruits);
+console.log(fruits.indexOf('사과'));
+
+//가지고 있는지 아닌지 확인할 수 있는 includes
+console.log(fruits.includes('참외'));
 console.log(fruits);
